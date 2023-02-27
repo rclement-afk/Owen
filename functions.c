@@ -7,42 +7,48 @@
 void run_2(){
 slow_servo(arm,short_arm,1);
     slow_servo(claw,claw_empty,1);
-    left_turn(400);
+    left_turn(500);
 //move(0,0);
-  move(400,400);
-    msleep(1200);
+  move(1000,1000);
+    msleep(870);
+    move(0,0);
+   
 slow_servo(claw,claw_grab-100,1);
  // move(0,0);
-    slow_servo(arm,tall_arm+400,1);
+    slow_servo(arm,tall_arm+600,1);
    move(0,0);
-   move(-500,-500);
-  msleep(1200);
-    right_turn(1650);//1550      //. comment stuff monday
-    move(550,500);
-    msleep(1500);
+   move(-1000,-1000);
+  msleep(600);
+    right_turn(1105);//1650   
+    /////////////////////////////. comment stuff monday
+    move(1000,1000);
+    msleep(750);
    // move(-400,-400);
    // msleep(1500);
    move(0,0);
-slow_servo(arm,short_arm,1);
+slow_servo(arm,1300,1);
     slow_servo(claw,claw_empty,1);
     
    
-   move(-300,-300);
-    msleep(2800);
-    left_turn(700);
-    move(-300,-300);
-    msleep(1950);
+   move(-1100,-1100);
+    msleep(1000);
+   square_up(1,400);
+    /////////////////////////////// 
+    left_turn(1370);
+    move(-800,-800);
+    msleep(250);
   move(0,0);
     slow_servo(arm,short_arm+150,1);
-    move(400,400);
-    msleep(5200);
+    move(1000,1000);
+    msleep(1100);
     move(0,0);
     slow_servo(claw,claw_grab-100,1);
   move(0,0);
     slow_servo(arm,tall_arm,1);
     move(-600,-600);
     msleep(2000);
-    right_turn(400);//500
+    right_turn(650);//500
+    ///////////////////////////////////////////////// here
    move(0,0);
    slow_servo(arm,short_arm,1);
     slow_servo(claw,claw_empty,1);
@@ -69,7 +75,43 @@ slow_servo(claw,claw_empty,1);
     move(-300,-300);
     msleep(2000);
     square_up(2,350);
-   // left_turn(500);
+    move(0,0);
+    move(-400,-400);
+    msleep(5000);
+    move(0,0);
+   left_turn(1300);
+    move(-400,-400);
+    msleep(1800);
+    move(0,0);
+    slow_servo(arm,short_arm,1);
+  move(0,0);
+    move(300,300);
+    msleep(3000);
+    slow_servo(claw,claw_grab,1);
+    slow_servo(arm,tall_arm,1);
+   move(300,300);
+    msleep(2000);
+    left_turn(1400);
+  move(0,0);
+    move(-600,-600);
+    msleep(3500);
+    move(0,0);
+    square_up(2,400);
+    move(-200,-200);
+    msleep(2000);
+    move(0,0);
+    square_up(2,350);
+    move(0,0);
+    left_turn(2300);
+    move(0,0);
+    slow_servo(arm,short_arm,1);
+    slow_servo(claw,claw_empty,1);
+    slow_servo(arm,short_arm,1);
+    slow_servo(arm,900,1);
+    
+    
+    
+    
 //move(0,0);
   //  move(400,400);
   //  msleep(3000);
@@ -78,13 +120,15 @@ slow_servo(claw,claw_empty,1);
    // slow_servo(claw,claw_grab,1);
    // slow_servo(arm,tall_arm,1);
    // right_turn(1000);
-    move(600,520);
-   msleep(5000);
-   move(0,0);
-    move(0,0);
-    move(0,0);
+  ///////////// // move(600,520);
+   //msleep(6300);//4000
+   //move(0,0);
+   // move(0,0);
+   // move(0,0);
     //slow_servo(arm,short_arm,1);
-   left_turn(2500);
+  // left_turn(2300);
+  //  move(-600,-600);
+  //  msleep(4000);
 
     
     
