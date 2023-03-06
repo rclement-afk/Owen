@@ -5,138 +5,183 @@
 #include </home/root/Documents/KISS/Default User/Wombat/include/timer.h>
 #include </home/root/Documents/KISS/Default User/Wombat/include/threads.h>
 void run_2(){
-slow_servo(arm,short_arm,1);
-    slow_servo(claw,claw_empty,1);
+    slow_servo(arm,short_arm,1);
+  slow_servo(claw,claw_empty,1);
+    slow_servo(arm,short_arm-700,1);
+  
+    move(0,0);
     left_turn(500);
-//move(0,0);
-  move(1000,1000);
+    move(0,0);
+    slow_servo(arm,short_arm,1);
+        move(0,0);
+     
+    //move(0,0);
+  //  move(0,0);
+    move(1000,1000);
     msleep(870);
     move(0,0);
-   
-slow_servo(claw,claw_grab-100,1);
- // move(0,0);
-    slow_servo(arm,tall_arm+600,1);
-   move(0,0);
-   move(-1000,-1000);
-  msleep(600);
+
+    slow_servo(claw,claw_grab-100,1);
+    // move(0,0);
+    slow_servo(arm,tall_arm+400,1);
+    move(0,0);
+    move(-1000,-1000);
+    msleep(600);
     right_turn(1105);//1650   
     /////////////////////////////. comment stuff monday
     move(1000,1000);
     msleep(750);
-   // move(-400,-400);
-   // msleep(1500);
-   move(0,0);
-slow_servo(arm,1300,1);
+    // move(-400,-400);
+    // msleep(1500);
+    move(0,0);
+    slow_servo(arm,tall_arm+400,1);
     slow_servo(claw,claw_empty,1);
-    
-   
-   move(-1100,-1100);
+
+
+    move(-1100,-1100);
     msleep(1000);
-   square_up(1,400);
+    square_up(1,400);
     /////////////////////////////// 
     left_turn(1370);
     move(-800,-800);
-    msleep(250);
-  move(0,0);
-    slow_servo(arm,short_arm+150,1);
+    msleep(650);
+    move(0,0);
+    slow_servo(arm,short_arm+250,1);
     move(1000,1000);
     msleep(1100);
     move(0,0);
     slow_servo(claw,claw_grab-100,1);
-  move(0,0);
-    slow_servo(arm,tall_arm,1);
-    move(-600,-600);
-    msleep(2000);
-    right_turn(650);//500
+    move(0,0);
+    slow_servo(arm,1300,1);
+    move(-1200,-1200);
+    msleep(800);
+    right_turn(450);//500
     ///////////////////////////////////////////////// here
-   move(0,0);
-   slow_servo(arm,short_arm,1);
-    slow_servo(claw,claw_empty,1);
-    slow_servo(arm,tall_arm,1);
     move(0,0);
-    move(-600,-600);
-    msleep(2300);
-    square_up(2,450);
-    move(-200,-200);
-    msleep(2000);
-  slow_servo(arm,short_arm,1);
-    move(600,600);
-    msleep(2500);
-   move(0,0);
-    slow_servo(claw,claw_grab,1);
-    right_turn(900);
-slow_servo(claw,claw_empty,1);
-    slow_servo(arm,tall_arm,1);
-    left_turn(800);
-    move(0,0);
-    move(-600,-600);
-    msleep(3000);
-    square_up(1,450);
-    move(-300,-300);
-    msleep(2000);
-    square_up(2,350);
-    move(0,0);
-    move(-400,-400);
-    msleep(5000);
-    move(0,0);
-   left_turn(1300);
-    move(-400,-400);
-    msleep(1800);
-    move(0,0);
-    slow_servo(arm,short_arm,1);
-  move(0,0);
-    move(300,300);
-    msleep(3000);
-    slow_servo(claw,claw_grab,1);
-    slow_servo(arm,tall_arm,1);
-   move(300,300);
-    msleep(2000);
-    left_turn(1400);
-  move(0,0);
-    move(-600,-600);
-    msleep(3500);
-    move(0,0);
-    square_up(2,400);
-    move(-200,-200);
-    msleep(2000);
-    move(0,0);
-    square_up(2,350);
-    move(0,0);
-    left_turn(2300);
-    move(0,0);
-    slow_servo(arm,short_arm,1);
-    slow_servo(claw,claw_empty,1);
-    slow_servo(arm,short_arm,1);
-    slow_servo(arm,900,1);
-    
-    
-    
-    
-//move(0,0);
-  //  move(400,400);
-  //  msleep(3000);
-   // move(0,0);
-   // slow_servo(arm,short_arm-850,1);
-   // slow_servo(claw,claw_grab,1);
-   // slow_servo(arm,tall_arm,1);
-   // right_turn(1000);
-  ///////////// // move(600,520);
-   //msleep(6300);//4000
-   //move(0,0);
-   // move(0,0);
-   // move(0,0);
-    //slow_servo(arm,short_arm,1);
-  // left_turn(2300);
-  //  move(-600,-600);
-  //  msleep(4000);
 
-    
-    
-    
-    
-    
-    
-  //  slow_servo(claw,claw_grab+700,1);
+    slow_servo(claw,claw_empty,1);
+    slow_servo(arm,tall_arm+400,1);
+    move(0,0);
+    move(-1000,-1000);
+    msleep(1300);
+    square_up(2,450);
+    ///////////////////////////////////////// here
+    left_turn(2150);
+
+    ///////////////
+
+    // slow_servo(arm,short_arm,1);
+    move(-1000,-1000);
+    msleep(650);
+    move(0,0);
+    slow_servo(arm,short_arm,1);
+    move(0,0);
+    move(1000,1000);
+    msleep(500);
+    move(0,0);
+
+    slow_servo(claw,claw_grab,1);
+
+    slow_servo(arm,tall_arm+400,1);
+    move(0,0);
+    left_turn(900);
+    ////////////////// here
+    slow_servo(claw,claw_empty,1);
+    move(0,0);
+    move(-1000,-1000);
+    msleep(700);
+    right_turn(775);
+    move(0,0);
+
+    square_up(1,400);
+    move(-1000,-1000);
+    msleep(1100);
+    right_turn(850);
+    move(0,0);
+    move(-1000,-1000);
+    msleep(1000);
+    move(0,0);
+    slow_servo(arm,short_arm,1);
+    square_up(1,400);
+
+
+    move(1050,1000);
+    msleep(3200);
+    move(0,0);
+    slow_servo(arm,700,1);
+    move(0,0);
+    left_turn(2150);
+    move(0,0);
+
+    move(0,0);
+
+    move(-1200,-1200);
+    msleep(1500);
+    slow_servo(arm,1100,1);
+    move(0,0);
+    slow_servo(arm,1300,1);
+    slow_servo(claw,claw_grab,1);
+    slow_servo(arm,900,1);
+    right_turn(1200);
+    slow_servo(claw,claw_empty,1);
+    left_turn(1200);
+    move(0,0);
+    move(-1000,-1000);
+    msleep(1500);
+    move(0,0);
+
+    move(0,0);
+    right_turn(480);
+    move(0,0);
+    slow_servo(arm,short_arm+105,1);
+    slow_servo(claw,claw_grab,1);
+    slow_servo(arm,900,1);
+    move(0,0);
+    move(-500,-500);
+    msleep(850);
+    move(0,0);
+    left_turn(300);
+    move(0,0);
+    slow_servo(arm,1100,1);
+    slow_servo(claw,claw_empty,1);
+    move(-1000,-1000);
+    msleep(1000);
+    move(0,0);
+   right_turn(750);
+   slow_servo(arm,short_arm+75,1);
+    move(1000,1000);
+    msleep(1000);
+    slow_servo(claw,claw_grab,1);
+
+
+
+
+
+    //move(0,0);
+    //  move(400,400);
+    //  msleep(3000);
+    // move(0,0);
+    // slow_servo(arm,short_arm-850,1);
+    // slow_servo(claw,claw_grab,1);
+    // slow_servo(arm,tall_arm,1);
+    // right_turn(1000);
+    ///////////// // move(600,520);
+    //msleep(6300);//4000
+    //move(0,0);
+    // move(0,0);
+    // move(0,0);
+    //slow_servo(arm,short_arm,1);
+    // left_turn(2300);
+    //  move(-600,-600);
+    //  msleep(4000);
+
+
+
+
+
+
+
+    //  slow_servo(claw,claw_grab+700,1);
 
 
 }
@@ -155,7 +200,7 @@ if(analog(0)<1500&&analog(1)<1500)
 }
 void b_drive(int time)
 {
-   
+
 
 }
 
@@ -195,8 +240,8 @@ void right_turn(int tic)
 }
 void grab_poms_2(){
 
-   
-  
+
+
 
 }
 
@@ -275,11 +320,11 @@ void slow_servo(int part, int des, int speed) {
 };
 
 void move(int l_speed,int r_speed){//basic moving function thats based off mav
-//int    l_speed=65;
-   // int r_speed=65;
+    //int    l_speed=65;
+    // int r_speed=65;
     mav(MR,r_speed);
     mav(ML,l_speed);
-   
+
 };
 
 void a_cel(){
@@ -312,7 +357,7 @@ void de_cel(){
 //////////////////////////////////////////////////////////////////
 int black_speed;
 void square_up(int ending,int speed){
-  int l_midpoint=2100;
+    int l_midpoint=2100;
     int r_midpoint=2150;
     if(speed > 0 && speed < 400){//failcheck for speed
         black_speed = speed;
@@ -340,7 +385,7 @@ void square_up(int ending,int speed){
         case 1: //if ending on white:
             {
                 while(1){
-                    
+
                     if(buffer(lIR)>l_midpoint && buffer(rIR)>r_midpoint){ //move forward if black
                         move(black_speed,black_speed);
                     }
@@ -348,7 +393,7 @@ void square_up(int ending,int speed){
                         move(-0.33*black_speed,black_speed);
                     }
                     if(buffer(rIR)<r_midpoint){ //right wheel back if right sensor is white 
-                        
+
                         move(black_speed,-0.33*black_speed);
                     }
                     if(buffer(lIR)<l_midpoint && buffer(rIR)<r_midpoint){ //if white, stop
@@ -557,7 +602,7 @@ void PID_gyro_drive(int speed, double time){
 };
 ////////////////////////////////////////////////////////
 void grab_poms(){
-   
+
 
 }
 ///////////////////////////

@@ -11,11 +11,12 @@ int main()
 //float intial=seconds();
 //printf("%f",intial);
 //slow_servo(arm,900,1);
-    slow_servo(claw,claw_grab-50,1);
- slow_servo(claw,claw_empty,1);  
- //   slow_servo(claw,claw_grab-50,1);
+ ////  slow_servo(arm,tall_arm,1);
+    //slow_servo(arm,short_arm,1);
+//  slow_servo(claw,claw_grab-700,1);
   
-  run_2();
+ run_2();
+ //   left_turn(500);
    // float final=seconds();
     
     //	int calibrate();

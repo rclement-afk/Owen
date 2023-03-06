@@ -6,12 +6,12 @@
 #include </home/root/Documents/KISS/Default User/Wombat/include/run_functs.h>
 #include </home/root/Documents/KISS/Default User/Wombat/include/clone_consts.h>
 int arm=1;
-int tall_arm=630;
-int short_arm=2407;
+int tall_arm=517;
+int short_arm=1800;
 int claw_full_close=850;
-int claw_empty=1800;
+int claw_empty=1600;//1800
 int claw=2;
-int claw_grab=750;
+int claw_grab=700;
 //int arm_prism = arm_max - 380;
 //int arm_min = arm_max - 1075;
 //int arm_valve = arm_max - 290;
