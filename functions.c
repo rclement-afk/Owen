@@ -5,6 +5,7 @@
 #include </home/root/Documents/KISS/Default User/Wombat/include/timer.h>
 #include </home/root/Documents/KISS/Default User/Wombat/include/threads.h>
 void run_2(){
+ 
     slow_servo(arm,short_arm,1);
   slow_servo(claw,claw_empty,1);
     slow_servo(arm,short_arm-700,1);
@@ -117,12 +118,14 @@ void run_2(){
 
     move(-1200,-1200);
     msleep(1500);
+    
+    slow_servo(claw,claw_empty,1);
     slow_servo(arm,1100,1);
     move(0,0);
-    slow_servo(arm,1300,1);
+    slow_servo(arm,1200,1);
     slow_servo(claw,claw_grab,1);
     slow_servo(arm,900,1);
-    right_turn(1200);
+    right_turn(1500);
     slow_servo(claw,claw_empty,1);
     left_turn(1200);
     move(0,0);
@@ -131,28 +134,62 @@ void run_2(){
     move(0,0);
 
     move(0,0);
-    right_turn(480);
+    right_turn(620);
     move(0,0);
-    slow_servo(arm,short_arm+105,1);
+    slow_servo(arm,1200,1);
     slow_servo(claw,claw_grab,1);
     slow_servo(arm,900,1);
     move(0,0);
     move(-500,-500);
-    msleep(850);
+    msleep(350);
     move(0,0);
-    left_turn(300);
+    left_turn(500);
     move(0,0);
-    slow_servo(arm,1100,1);
+    slow_servo(arm,900,1);
     slow_servo(claw,claw_empty,1);
     move(-1000,-1000);
     msleep(1000);
     move(0,0);
-   right_turn(750);
-   slow_servo(arm,short_arm+75,1);
+   right_turn(600);
+   slow_servo(arm,short_arm+150,1);
     move(1000,1000);
-    msleep(1000);
+    msleep(800);
+    move(0,0);
     slow_servo(claw,claw_grab,1);
+  move(0,0);
+    right_turn(1400);
+    move(0,0);
+    slow_servo(claw,claw_empty,1);
 
+    move(0,0);
+    move(-1000,-1000);
+    msleep(1000);
+    move(0,0);
+    slow_servo(arm,tall_arm,1);
+    move(0,0);
+left_turn(1800);
+    move(-1000,-1000);
+    msleep(1000);
+    square_up(1,400);
+    move(-1000,-1000);
+    msleep(400);
+    square_up(1,400);
+    
+   move(0,0);
+    slow_servo(arm,tall_arm-400,1);
+    move(0,0);
+   move(1050,1000);
+    msleep(2500);
+    move(0,0);
+    left_turn(1950);
+    
+    //  move(0,0);
+  //  move(1000,1000);
+ //   msleep(2000);
+ //   move(0,0);
+//    left_turn(3200);
+    
+    
 
 
 
