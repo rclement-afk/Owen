@@ -4,20 +4,59 @@
 #include </home/root/Documents/KISS/Default User/Wombat/include/consts.h>
 #include </home/root/Documents/KISS/Default User/Wombat/include/timer.h>
 #include </home/root/Documents/KISS/Default User/Wombat/include/threads.h>
+void Open_Arch(){
+           cmpc(3);
+    while(gmpc(3)<300){
+        motor(3,10);
+        if(gmpc(3)>300)
+            move(0,0);
+      
+}
+}
+
+void Open_Claw(){
+ cmpc(0);
+    while(gmpc(0)<-300){
+        motor(0,-20);
+        if(gmpc(0)>-300)
+            move(0,0);
+    }
+}
+void reset_claw()
+{
+    while(digital(9)==0)//reset the claws
+    {
+        motor(0,20);
+    }
+    motor(0,0);
+    msleep(300);
+
+}
+
+
+
+
+void reset_arc()
+{
+    while(digital(8)==0)//reset the arc
+    {
+        motor(3,-10);
+        msleep(5);
+    }
+    motor(3,0);
+    cmpc(3);
+
+}
+
 void run_2(){
- 
-    slow_servo(arm,short_arm,1);
-  slow_servo(claw,claw_empty,1);
-    slow_servo(arm,short_arm-700,1);
-  
+    ///////////////////////////////////////// first left turn aka first green set of poms
+   
     move(0,0);
-    left_turn(500);
+    left_turn(550);
     move(0,0);
     slow_servo(arm,short_arm,1);
-        move(0,0);
-     
-    //move(0,0);
-  //  move(0,0);
+    move(0,0);
+
     move(1000,1000);
     msleep(870);
     move(0,0);
@@ -28,8 +67,9 @@ void run_2(){
     move(0,0);
     move(-1000,-1000);
     msleep(600);
+    //////////////////////////////////////////// end first set green poms.. Poms should be grabbed.
     right_turn(1105);//1650   
-    /////////////////////////////. comment stuff monday
+
     move(1000,1000);
     msleep(750);
     // move(-400,-400);
@@ -37,13 +77,13 @@ void run_2(){
     move(0,0);
     slow_servo(arm,tall_arm+400,1);
     slow_servo(claw,claw_empty,1);
-
-
+    ////////////////////////////////// Bot should be facing towards maze, and dropped off poms in box. 
+    ///////////////// Start of second set of green poms.
     move(-1100,-1100);
     msleep(1000);
     square_up(1,400);
-    /////////////////////////////// 
-    left_turn(1370);
+    ////////////////////////////////////// Bot should be facing the green poms ready to apporach the poms.
+    left_turn(1470);//1370 before new claw
     move(-800,-800);
     msleep(650);
     move(0,0);
@@ -52,12 +92,13 @@ void run_2(){
     msleep(1100);
     move(0,0);
     slow_servo(claw,claw_grab-100,1);
+    ////////////////////////////////////// Poms should be grabbed. Next is to put them into same box as previous set of poms.
     move(0,0);
     slow_servo(arm,1300,1);
     move(-1200,-1200);
     msleep(800);
     right_turn(450);//500
-    ///////////////////////////////////////////////// here
+    //////////////////////////////////////////////////////// Bot should be facing box with first set of poms were.
     move(0,0);
 
     slow_servo(claw,claw_empty,1);
@@ -66,12 +107,8 @@ void run_2(){
     move(-1000,-1000);
     msleep(1300);
     square_up(2,450);
-    ///////////////////////////////////////// here
-    left_turn(2150);
-
-    ///////////////
-
-    // slow_servo(arm,short_arm,1);
+    ////////////////////////////////// Poms should be dropped. Will be heading to first set of red poms in between the 2 green sets.
+    left_turn(2150);//2150
     move(-1000,-1000);
     msleep(650);
     move(0,0);
@@ -84,17 +121,20 @@ void run_2(){
     slow_servo(claw,claw_grab,1);
 
     slow_servo(arm,tall_arm+400,1);
+    ////////////////////////// Red poms should be grabbed and should turn left to deposit those poms.
     move(0,0);
     left_turn(900);
-    ////////////////// here
     slow_servo(claw,claw_empty,1);
+    ///////////////////////////// Red poms should be out of claw. Driving to reset point.
+
     move(0,0);
     move(-1000,-1000);
     msleep(700);
-    right_turn(775);
+    right_turn(575);//775
     move(0,0);
 
     square_up(1,400);
+    /////////////////////////////// Reset point reached. Going to drive to first stack of poms
     move(-1000,-1000);
     msleep(1100);
     right_turn(850);
@@ -104,7 +144,7 @@ void run_2(){
     move(0,0);
     slow_servo(arm,short_arm,1);
     square_up(1,400);
-
+    ///////////////////////////////// should be facing the maze so Bot can drive to first stack of red poms.
 
     move(1050,1000);
     msleep(3200);
@@ -118,15 +158,16 @@ void run_2(){
 
     move(-1200,-1200);
     msleep(1500);
-    
+    /////////////////////////////////// Should be physcially squared up on pvc pipe, so I can grab top green pom.
     slow_servo(claw,claw_empty,1);
     slow_servo(arm,1100,1);
     move(0,0);
     slow_servo(arm,1200,1);
     slow_servo(claw,claw_grab,1);
-    slow_servo(arm,900,1);
+    slow_servo(arm,700,1);
     right_turn(1500);
     slow_servo(claw,claw_empty,1);
+    ////////////////////////////////////    Top green pom should be moved out the way to the right.
     left_turn(1200);
     move(0,0);
     move(-1000,-1000);
@@ -135,61 +176,55 @@ void run_2(){
 
     move(0,0);
     right_turn(620);
+
     move(0,0);
-    slow_servo(arm,1200,1);
+    slow_servo(arm,1110,1);//1200
     slow_servo(claw,claw_grab,1);
     slow_servo(arm,900,1);
+    ///////////////////////////////////////////////////////////// Top pom in 2nd 3 stack of poms should be grabbed.
     move(0,0);
     move(-500,-500);
-    msleep(350);
+    msleep(150);//350,250
     move(0,0);
-    left_turn(500);
+    left_turn(600);//500
     move(0,0);
     slow_servo(arm,900,1);
     slow_servo(claw,claw_empty,1);
+    ////////////////////////////////////// Pom should be by the 3 red poms from the first stack
     move(-1000,-1000);
     msleep(1000);
     move(0,0);
-   right_turn(600);
-   slow_servo(arm,short_arm+150,1);
+    right_turn(600);
+    slow_servo(arm,short_arm+150,1);
+    ////////////////////////////////// Should be facing second stack of the 3 remaining green poms.
     move(1000,1000);
     msleep(800);
     move(0,0);
     slow_servo(claw,claw_grab,1);
-  move(0,0);
+    move(0,0);
     right_turn(1400);
+
     move(0,0);
     slow_servo(claw,claw_empty,1);
+    ////////////////////////////////// 3 green poms should in box. Should head to middle black line which is my reset point.
 
     move(0,0);
     move(-1000,-1000);
-    msleep(1000);
+    msleep(1300);
     move(0,0);
     slow_servo(arm,tall_arm,1);
     move(0,0);
-left_turn(1800);
-    move(-1000,-1000);
-    msleep(1000);
-    square_up(1,400);
-    move(-1000,-1000);
-    msleep(400);
-    square_up(1,400);
-    
-   move(0,0);
-    slow_servo(arm,tall_arm-400,1);
-    move(0,0);
-   move(1050,1000);
-    msleep(2500);
-    move(0,0);
-    left_turn(1950);
-    
-    //  move(0,0);
-  //  move(1000,1000);
- //   msleep(2000);
- //   move(0,0);
-//    left_turn(3200);
-    
-    
+    left_turn(1800);
+  //  move(0,0);
+   // move(-1000,-1000);
+  //  msleep(1000);
+  //  square_up(1,400);
+  //  move(-1000,-1000);
+  //  msleep(400);
+  //  square_up(1,400);
+    /////////////////////////// reset point reached
+
+
 
 
 

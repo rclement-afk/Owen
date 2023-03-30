@@ -1,10 +1,10 @@
 //main functs
-
+void Open_Claw();
 
 int  calibrate();
 	void pre_run();
  void run_2();
-
+void Open_Arch();
 int itt(float inches);
 void wait_light();
 void line_follow(int side, int speed);
@@ -27,3 +27,5 @@ void left_turn();
 void grab_poms_left();
 void b_drive();
 void run();
+void reset_claw();
+void reset_arc();

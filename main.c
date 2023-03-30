@@ -8,33 +8,27 @@
 //slow_servo(int part, int des, int speed) {
 int main()
 {
-//float intial=seconds();
-//printf("%f",intial);
-//slow_servo(arm,900,1);
- ////  slow_servo(arm,tall_arm,1);
-    //slow_servo(arm,short_arm,1);
-//  slow_servo(claw,claw_grab-700,1);
-  
- run_2();
- //   left_turn(500);
-   // float final=seconds();
-    
-    //	int calibrate();
- 	//claw_open();
-//   pre_run();
-  
-   //square_up(2,400);
-   //  run();
 
-   // move(-200,-200);
-   // msleep(2000);
-  //  square_up(1,450);
- // slow_servo(claw,claw_empty,2);
- // move(0,0);
- //   slow_servo(claw,claw_grab+750,1);
-   //slow_servo(claw,claw_empty-780,1);
-     // slow_servo(claw,claw_grab+750,1);
-      //slow_servo(claw,claw_empty-780,1);
+    reset_claw();
+ reset_arc();
+    Open_Arch();
+    motor(0,20);
+    msleep(200);
+    
+   // reset_claw();
+   // Open_Claw();
+ //   move(0,0);
+ // slow_servo(arm,400,1);
+ //   move(0,0);
+ //   slow_servo(claw,claw_empty,1);
+ //   move(0,0);
+  //  slow_servo(claw,1297,1);
+ //   motor(3,100);
+ //   msleep(1000);
+   
+    //wait_for_light();
+// run_2();
+
     return 0;
 	 
 }

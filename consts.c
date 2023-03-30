@@ -5,31 +5,21 @@
 #include </home/root/Documents/KISS/Default User/Wombat/include/threads.h>
 #include </home/root/Documents/KISS/Default User/Wombat/include/run_functs.h>
 #include </home/root/Documents/KISS/Default User/Wombat/include/clone_consts.h>
-int arm=1;
+int arm=0;///////////////// arm shifter
 int tall_arm=517;
 int short_arm=1800;
 int claw_full_close=850;
 int claw_empty=1600;//1800
-int claw=2;
+int claw=2;///////// claw
 int claw_grab=600;
-//int arm_prism = arm_max - 380;
-//int arm_min = arm_max - 1075;
-//int arm_valve = arm_max - 290;
-//int arm_building = arm_max - 550;
+/////////// reset_claw analog =9
+/////////// reset_arc analog=8
+int ML = 1;///////////// motor left, black closest screen
+int MR = 2;///////////// motor right, red closest screen
+int rIR = 0;////// right color sensor
+int lIR = 2;/////// left color sensor
 
-//int hand_max = 1050
-//int hand_min = hand_max - 705;
-//int hand_prism = hand_max - 400;
-//int hand_prism_close = hand_max - 555;
-//int hand_start = hand_max - 163;
 
-int ML = 1;
-int MR = 2;
-
-//int shifter = 2;
-//int arm = 1;
-int rIR = 0;
-int lIR = 2;
 int fET = 4;
 int light = 3;
 int BR = 1;
